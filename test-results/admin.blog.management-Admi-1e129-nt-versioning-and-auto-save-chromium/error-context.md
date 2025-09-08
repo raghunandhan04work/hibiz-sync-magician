@@ -1,0 +1,114 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - region "Notifications (F8)":
+    - list
+  - region "Notifications alt+T"
+  - generic [ref=e3]:
+    - navigation [ref=e4]:
+      - generic [ref=e6]:
+        - generic [ref=e7]:
+          - button "Back" [ref=e8] [cursor=pointer]:
+            - img
+            - text: Back
+          - link "H Hibiz.ai" [ref=e9] [cursor=pointer]:
+            - /url: /
+            - generic [ref=e11] [cursor=pointer]: H
+            - generic [ref=e12] [cursor=pointer]: Hibiz.ai
+        - generic [ref=e13]:
+          - button "Products" [ref=e14] [cursor=pointer]:
+            - text: Products
+            - img [ref=e15] [cursor=pointer]
+          - button "Solutions" [ref=e17] [cursor=pointer]:
+            - text: Solutions
+            - img [ref=e18] [cursor=pointer]
+          - link "Blog" [ref=e20] [cursor=pointer]:
+            - /url: /blog
+          - link "Docs" [ref=e21] [cursor=pointer]:
+            - /url: /docs
+          - link "Pricing" [ref=e22] [cursor=pointer]:
+            - /url: /pricing
+          - link "Contact Us" [ref=e23] [cursor=pointer]:
+            - /url: /contact
+          - link "Enterprise Quote" [ref=e24] [cursor=pointer]:
+            - /url: /enterprise
+            - button "Enterprise Quote" [ref=e25] [cursor=pointer]
+    - main [ref=e26]:
+      - generic [ref=e28]:
+        - generic [ref=e29]:
+          - heading "Login" [level=3] [ref=e30]
+          - paragraph [ref=e31]: Access the admin dashboard
+        - generic [ref=e32]:
+          - generic [ref=e33]:
+            - generic [ref=e34]:
+              - generic [ref=e35]: Email
+              - textbox "Email" [ref=e36]
+            - generic [ref=e37]:
+              - generic [ref=e38]: Password
+              - textbox "Password" [ref=e39]
+            - button "Login" [ref=e40] [cursor=pointer]
+          - button "Need an account? Sign up" [ref=e42] [cursor=pointer]
+    - contentinfo [ref=e43]:
+      - generic [ref=e44]:
+        - generic [ref=e45]:
+          - generic [ref=e46]:
+            - link "H Hibiz.ai" [ref=e47] [cursor=pointer]:
+              - /url: /
+              - generic [ref=e49] [cursor=pointer]: H
+              - generic [ref=e50] [cursor=pointer]: Hibiz.ai
+            - paragraph [ref=e51]: Empowering businesses with cutting-edge AI solutions for automation, analytics, and digital transformation.
+            - generic [ref=e52]:
+              - link [ref=e53] [cursor=pointer]:
+                - /url: "#"
+                - img [ref=e54] [cursor=pointer]
+              - link [ref=e56] [cursor=pointer]:
+                - /url: "#"
+                - img [ref=e57] [cursor=pointer]
+              - link [ref=e59] [cursor=pointer]:
+                - /url: "#"
+                - img [ref=e60] [cursor=pointer]
+          - generic [ref=e64]:
+            - heading "Quick Links" [level=4] [ref=e65]
+            - list [ref=e66]:
+              - listitem [ref=e67]:
+                - link "Products" [ref=e68] [cursor=pointer]:
+                  - /url: /products
+              - listitem [ref=e69]:
+                - link "Solutions" [ref=e70] [cursor=pointer]:
+                  - /url: /solutions
+              - listitem [ref=e71]:
+                - link "Pricing" [ref=e72] [cursor=pointer]:
+                  - /url: /pricing
+              - listitem [ref=e73]:
+                - link "Documentation" [ref=e74] [cursor=pointer]:
+                  - /url: /docs
+          - generic [ref=e75]:
+            - heading "Resources" [level=4] [ref=e76]
+            - list [ref=e77]:
+              - listitem [ref=e78]:
+                - link "Blog" [ref=e79] [cursor=pointer]:
+                  - /url: /blog
+              - listitem [ref=e80]:
+                - link "Contact Us" [ref=e81] [cursor=pointer]:
+                  - /url: /contact
+              - listitem [ref=e82]:
+                - link "Enterprise" [ref=e83] [cursor=pointer]:
+                  - /url: /enterprise
+              - listitem [ref=e84]:
+                - link "Support" [ref=e85] [cursor=pointer]:
+                  - /url: "#"
+          - generic [ref=e86]:
+            - heading "Contact" [level=4] [ref=e87]
+            - generic [ref=e88]:
+              - generic [ref=e89]:
+                - img [ref=e90]
+                - generic [ref=e93]: hello@hibiz.ai
+              - generic [ref=e94]:
+                - img [ref=e95]
+                - generic [ref=e97]: +1 (555) 123-4567
+              - generic [ref=e98]:
+                - img [ref=e99]
+                - generic [ref=e102]: San Francisco, CA
+        - paragraph [ref=e104]: © 2024 Hibiz.ai. All rights reserved. | Privacy Policy | Terms of Service
+```

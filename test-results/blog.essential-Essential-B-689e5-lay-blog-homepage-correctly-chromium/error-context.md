@@ -1,0 +1,209 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - region "Notifications (F8)":
+    - list
+  - region "Notifications alt+T"
+  - generic [ref=e3]:
+    - navigation [ref=e4]:
+      - generic [ref=e6]:
+        - generic [ref=e7]:
+          - button "Back" [ref=e8] [cursor=pointer]:
+            - img
+            - text: Back
+          - link "H Hibiz.ai" [ref=e9] [cursor=pointer]:
+            - /url: /
+            - generic [ref=e11] [cursor=pointer]: H
+            - generic [ref=e12] [cursor=pointer]: Hibiz.ai
+        - generic [ref=e13]:
+          - button "Products" [ref=e14] [cursor=pointer]:
+            - text: Products
+            - img [ref=e15] [cursor=pointer]
+          - button "Solutions" [ref=e17] [cursor=pointer]:
+            - text: Solutions
+            - img [ref=e18] [cursor=pointer]
+          - link "Blog" [ref=e20] [cursor=pointer]:
+            - /url: /blog
+          - link "Docs" [ref=e21] [cursor=pointer]:
+            - /url: /docs
+          - link "Pricing" [ref=e22] [cursor=pointer]:
+            - /url: /pricing
+          - link "Contact Us" [ref=e23] [cursor=pointer]:
+            - /url: /contact
+          - link "Enterprise Quote" [ref=e24] [cursor=pointer]:
+            - /url: /enterprise
+            - button "Enterprise Quote" [ref=e25] [cursor=pointer]
+    - main [ref=e26]:
+      - generic [ref=e28]:
+        - generic [ref=e30]:
+          - heading "Blog" [level=1] [ref=e31]
+          - paragraph [ref=e32]: Discover insights, trends, and innovations in AI and technology
+        - generic [ref=e33]:
+          - generic [ref=e35]:
+            - heading "Categories" [level=3] [ref=e37]
+            - generic [ref=e39]:
+              - button "All Articles (10)" [ref=e40] [cursor=pointer]
+              - button "general (2)" [ref=e41] [cursor=pointer]
+              - button "business (4)" [ref=e42] [cursor=pointer]
+              - button "technology (3)" [ref=e43] [cursor=pointer]
+              - button "ai (1)" [ref=e44] [cursor=pointer]
+          - generic [ref=e46]:
+            - heading "All Articles" [level=2] [ref=e47]
+            - generic [ref=e48]:
+              - generic [ref=e49] [cursor=pointer]:
+                - generic [ref=e50] [cursor=pointer]:
+                  - generic [ref=e51] [cursor=pointer]:
+                    - generic [ref=e52] [cursor=pointer]: general
+                    - generic [ref=e53] [cursor=pointer]: 8/20/2025
+                  - heading "Case Study Execution – Summary of Expectations (as per Anandhan Sir’s Debrief)" [level=3] [ref=e54] [cursor=pointer]
+                - paragraph [ref=e56] [cursor=pointer]: Case Study Execution – Summary of Expectations (as per Anandhan Sir’s Debrief)
+              - generic [ref=e57] [cursor=pointer]:
+                - generic [ref=e58] [cursor=pointer]:
+                  - generic [ref=e59] [cursor=pointer]:
+                    - generic [ref=e60] [cursor=pointer]: general
+                    - generic [ref=e61] [cursor=pointer]: 8/19/2025
+                  - heading "CAVIAR BLOG" [level=3] [ref=e62] [cursor=pointer]
+                - paragraph [ref=e64] [cursor=pointer]: Caviar Celebrates 20 Years
+              - generic [ref=e65] [cursor=pointer]:
+                - generic [ref=e66] [cursor=pointer]:
+                  - generic [ref=e67] [cursor=pointer]:
+                    - generic [ref=e68] [cursor=pointer]: business
+                    - generic [ref=e69] [cursor=pointer]: 8/14/2025
+                  - 'heading "Data Intelligence Revolution: How Smart Analytics Drive Business Success in 2024" [level=3] [ref=e70] [cursor=pointer]'
+                - paragraph [ref=e72] [cursor=pointer]: Explore how data intelligence is revolutionizing business decision-making in 2024, from predictive analytics to real-time insights, and discover the strategies successful companies use to gain competitive advantages.
+              - generic [ref=e73] [cursor=pointer]:
+                - generic [ref=e74] [cursor=pointer]:
+                  - generic [ref=e75] [cursor=pointer]:
+                    - generic [ref=e76] [cursor=pointer]: technology
+                    - generic [ref=e77] [cursor=pointer]: 8/14/2025
+                  - 'heading "Revolutionizing Customer Service with AI ChatBots: A 2024 Comprehensive Guide" [level=3] [ref=e78] [cursor=pointer]'
+                - paragraph [ref=e80] [cursor=pointer]: Discover how AI-powered chatbots are transforming customer service in 2024, offering 24/7 support, cost reduction, and enhanced customer experiences through advanced natural language processing and machine learning.
+              - generic [ref=e81] [cursor=pointer]:
+                - generic [ref=e82] [cursor=pointer]:
+                  - generic [ref=e83] [cursor=pointer]:
+                    - generic [ref=e84] [cursor=pointer]: technology
+                    - generic [ref=e85] [cursor=pointer]: 1/15/2024
+                  - 'heading "The Future of AI in Business Automation: 2024 Trends and Predictions" [level=3] [ref=e86] [cursor=pointer]'
+                - paragraph [ref=e88] [cursor=pointer]: Explore the latest trends in AI automation and discover how businesses are leveraging intelligent systems to streamline operations, reduce costs, and drive innovation in an increasingly competitive landscape.
+              - generic [ref=e89] [cursor=pointer]:
+                - generic [ref=e90] [cursor=pointer]:
+                  - generic [ref=e91] [cursor=pointer]:
+                    - generic [ref=e92] [cursor=pointer]: business
+                    - generic [ref=e93] [cursor=pointer]: 1/10/2024
+                  - 'heading "Case Study: How RetailMax Increased Sales by 300% with AI-Powered Recommendations" [level=3] [ref=e94] [cursor=pointer]'
+                - paragraph [ref=e96] [cursor=pointer]: Discover how RetailMax transformed their e-commerce platform using our SmartCRM and predictive analytics tools, resulting in unprecedented growth and customer satisfaction rates.
+              - generic [ref=e97] [cursor=pointer]:
+                - generic [ref=e98] [cursor=pointer]:
+                  - generic [ref=e99] [cursor=pointer]:
+                    - generic [ref=e100] [cursor=pointer]: business
+                    - generic [ref=e101] [cursor=pointer]: 1/5/2024
+                  - 'heading "Building an AI-First Culture: A Complete Guide for Modern Enterprises" [level=3] [ref=e102] [cursor=pointer]'
+                - paragraph [ref=e104] [cursor=pointer]: Learn practical strategies for integrating AI into your organizational culture, from employee training and change management to establishing AI governance frameworks that ensure sustainable success.
+              - generic [ref=e105] [cursor=pointer]:
+                - generic [ref=e106] [cursor=pointer]:
+                  - generic [ref=e107] [cursor=pointer]:
+                    - generic [ref=e108] [cursor=pointer]: technology
+                    - generic [ref=e109] [cursor=pointer]: 12/28/2023
+                  - 'heading "Machine Learning in Healthcare: Transforming Patient Care Through AI" [level=3] [ref=e110] [cursor=pointer]'
+                - paragraph [ref=e112] [cursor=pointer]: Explore how healthcare organizations are using machine learning to improve diagnostic accuracy, optimize treatment plans, and enhance patient outcomes while reducing operational costs.
+              - generic [ref=e113] [cursor=pointer]:
+                - generic [ref=e114] [cursor=pointer]:
+                  - generic [ref=e115] [cursor=pointer]:
+                    - generic [ref=e116] [cursor=pointer]: business
+                    - generic [ref=e117] [cursor=pointer]: 12/20/2023
+                  - 'heading "ROI Calculator: Measuring the Financial Impact of AI Implementation" [level=3] [ref=e118] [cursor=pointer]'
+                - paragraph [ref=e120] [cursor=pointer]: A comprehensive guide to calculating and measuring the return on investment for AI initiatives, including key metrics, benchmarks, and real-world examples from successful implementations.
+              - generic [ref=e121] [cursor=pointer]:
+                - generic [ref=e122] [cursor=pointer]:
+                  - generic [ref=e123] [cursor=pointer]:
+                    - generic [ref=e124] [cursor=pointer]: ai
+                    - generic [ref=e125] [cursor=pointer]: 12/15/2023
+                  - 'heading "Chatbot Best Practices: Creating Conversational AI That Actually Helps" [level=3] [ref=e126] [cursor=pointer]'
+                - paragraph [ref=e128] [cursor=pointer]: Discover the secrets to building effective chatbots that provide real value to customers, including design principles, training strategies, and integration techniques for maximum impact.
+          - generic [ref=e130]:
+            - heading "Featured Articles" [level=3] [ref=e132]
+            - generic [ref=e134]:
+              - generic [ref=e135] [cursor=pointer]:
+                - generic [ref=e136] [cursor=pointer]:
+                  - generic [ref=e137] [cursor=pointer]: Featured
+                  - generic [ref=e138] [cursor=pointer]: general
+                - heading "CAVIAR BLOG" [level=3] [ref=e139] [cursor=pointer]
+                - paragraph [ref=e140] [cursor=pointer]: 8/19/2025
+              - generic [ref=e141] [cursor=pointer]:
+                - 'img "Data Intelligence Revolution: How Smart Analytics Drive Business Success in 2024" [ref=e143] [cursor=pointer]'
+                - generic [ref=e144] [cursor=pointer]:
+                  - generic [ref=e145] [cursor=pointer]: Featured
+                  - generic [ref=e146] [cursor=pointer]: business
+                - 'heading "Data Intelligence Revolution: How Smart Analytics Drive Business Success in 2024" [level=3] [ref=e147] [cursor=pointer]'
+                - paragraph [ref=e148] [cursor=pointer]: 8/14/2025
+              - generic [ref=e149] [cursor=pointer]:
+                - 'img "Revolutionizing Customer Service with AI ChatBots: A 2024 Comprehensive Guide" [ref=e151] [cursor=pointer]'
+                - generic [ref=e152] [cursor=pointer]:
+                  - generic [ref=e153] [cursor=pointer]: Featured
+                  - generic [ref=e154] [cursor=pointer]: technology
+                - 'heading "Revolutionizing Customer Service with AI ChatBots: A 2024 Comprehensive Guide" [level=3] [ref=e155] [cursor=pointer]'
+                - paragraph [ref=e156] [cursor=pointer]: 8/14/2025
+    - contentinfo [ref=e157]:
+      - generic [ref=e158]:
+        - generic [ref=e159]:
+          - generic [ref=e160]:
+            - link "H Hibiz.ai" [ref=e161] [cursor=pointer]:
+              - /url: /
+              - generic [ref=e163] [cursor=pointer]: H
+              - generic [ref=e164] [cursor=pointer]: Hibiz.ai
+            - paragraph [ref=e165]: Empowering businesses with cutting-edge AI solutions for automation, analytics, and digital transformation.
+            - generic [ref=e166]:
+              - link [ref=e167] [cursor=pointer]:
+                - /url: "#"
+                - img [ref=e168] [cursor=pointer]
+              - link [ref=e170] [cursor=pointer]:
+                - /url: "#"
+                - img [ref=e171] [cursor=pointer]
+              - link [ref=e173] [cursor=pointer]:
+                - /url: "#"
+                - img [ref=e174] [cursor=pointer]
+          - generic [ref=e178]:
+            - heading "Quick Links" [level=4] [ref=e179]
+            - list [ref=e180]:
+              - listitem [ref=e181]:
+                - link "Products" [ref=e182] [cursor=pointer]:
+                  - /url: /products
+              - listitem [ref=e183]:
+                - link "Solutions" [ref=e184] [cursor=pointer]:
+                  - /url: /solutions
+              - listitem [ref=e185]:
+                - link "Pricing" [ref=e186] [cursor=pointer]:
+                  - /url: /pricing
+              - listitem [ref=e187]:
+                - link "Documentation" [ref=e188] [cursor=pointer]:
+                  - /url: /docs
+          - generic [ref=e189]:
+            - heading "Resources" [level=4] [ref=e190]
+            - list [ref=e191]:
+              - listitem [ref=e192]:
+                - link "Blog" [ref=e193] [cursor=pointer]:
+                  - /url: /blog
+              - listitem [ref=e194]:
+                - link "Contact Us" [ref=e195] [cursor=pointer]:
+                  - /url: /contact
+              - listitem [ref=e196]:
+                - link "Enterprise" [ref=e197] [cursor=pointer]:
+                  - /url: /enterprise
+              - listitem [ref=e198]:
+                - link "Support" [ref=e199] [cursor=pointer]:
+                  - /url: "#"
+          - generic [ref=e200]:
+            - heading "Contact" [level=4] [ref=e201]
+            - generic [ref=e202]:
+              - generic [ref=e203]:
+                - img [ref=e204]
+                - generic [ref=e207]: hello@hibiz.ai
+              - generic [ref=e208]:
+                - img [ref=e209]
+                - generic [ref=e211]: +1 (555) 123-4567
+              - generic [ref=e212]:
+                - img [ref=e213]
+                - generic [ref=e216]: San Francisco, CA
+        - paragraph [ref=e218]: © 2024 Hibiz.ai. All rights reserved. | Privacy Policy | Terms of Service
+```

@@ -2,39 +2,64 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Hibiz.ai Design System - Modern red & yellow theme with elegant gradients and animations */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
 @layer base {
   :root {
+    /* Brand Colors - Red & Yellow Theme */
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 0 0% 5%;
+    
+    /* Beautiful Background Gradients */
+    --gradient-background: linear-gradient(135deg, hsl(0 70% 92%) 0%, hsl(45 80% 90%) 30%, hsl(25 75% 94%) 60%, hsl(0 50% 96%) 100%);
+    --gradient-background-dark: linear-gradient(135deg, hsl(0 25% 12%) 0%, hsl(45 15% 8%) 30%, hsl(25 20% 10%) 60%, hsl(0 15% 6%) 100%);
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 0 0% 5%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 0 0% 5%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary Red */
+    --primary: 0 84% 60%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 0 84% 55%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary Yellow */
+    --secondary: 45 100% 60%;
+    --secondary-foreground: 0 0% 5%;
+    --secondary-hover: 45 100% 55%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Accent Orange (blend of red/yellow) */
+    --accent: 25 100% 58%;
+    --accent-foreground: 0 0% 100%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 0 84% 60%;
+
+    /* Brand Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(0 84% 60%), hsl(25 100% 58%));
+    --gradient-secondary: linear-gradient(135deg, hsl(45 100% 60%), hsl(60 100% 65%));
+    --gradient-hero: linear-gradient(135deg, hsl(0 84% 60%) 0%, hsl(25 100% 58%) 50%, hsl(45 100% 60%) 100%);
+    --gradient-dark: linear-gradient(135deg, hsl(0 0% 5%) 0%, hsl(0 0% 10%) 100%);
+
+    /* Shadows */
+    --shadow-elegant: 0 20px 40px -12px hsl(0 84% 60% / 0.25);
+    --shadow-glow: 0 0 40px hsl(0 84% 60% / 0.3);
+    --shadow-card: 0 4px 20px hsl(0 0% 0% / 0.1);
+
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     --radius: 0.5rem;
 
@@ -58,6 +83,9 @@ All colors MUST be HSL.
   .dark {
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
+    
+    /* Dark mode background gradient */
+    --gradient-background: var(--gradient-background-dark);
 
     --card: 222.2 84% 4.9%;
     --card-foreground: 210 40% 98%;
@@ -94,12 +122,207 @@ All colors MUST be HSL.
   }
 }
 
+/* Enhanced Rich Text Editor Styling */
+.enhanced-rich-text-editor .ql-toolbar {
+  border: none !important;
+  background: transparent !important;
+  padding: 0 !important;
+}
+
+.enhanced-rich-text-editor .ql-container {
+  border: none !important;
+  font-family: inherit;
+  border-radius: 0 !important;
+}
+
+.enhanced-rich-text-editor .ql-editor {
+  font-family: inherit;
+  color: hsl(var(--foreground));
+  background: hsl(var(--background));
+  min-height: 300px;
+  padding: 1rem;
+  border: 1px solid hsl(var(--border));
+  border-radius: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.enhanced-rich-text-editor .ql-editor:focus {
+  outline: none;
+  border-color: hsl(var(--primary));
+  box-shadow: 0 0 0 2px hsl(var(--primary) / 0.2);
+}
+
+.enhanced-rich-text-editor .ql-toolbar .ql-stroke {
+  stroke: hsl(var(--foreground));
+  transition: stroke 0.2s ease;
+}
+
+.enhanced-rich-text-editor .ql-toolbar .ql-fill {
+  fill: hsl(var(--foreground));
+  transition: fill 0.2s ease;
+}
+
+.enhanced-rich-text-editor .ql-toolbar button:hover,
+.enhanced-rich-text-editor .ql-toolbar button:focus,
+.enhanced-rich-text-editor .ql-toolbar button.ql-active {
+  color: hsl(var(--primary)) !important;
+  background: hsl(var(--primary) / 0.1) !important;
+  border-radius: 0.25rem;
+}
+
+.enhanced-rich-text-editor .ql-toolbar button:hover .ql-stroke,
+.enhanced-rich-text-editor .ql-toolbar button:focus .ql-stroke,
+.enhanced-rich-text-editor .ql-toolbar button.ql-active .ql-stroke {
+  stroke: hsl(var(--primary));
+}
+
+.enhanced-rich-text-editor .ql-toolbar button:hover .ql-fill,
+.enhanced-rich-text-editor .ql-toolbar button:focus .ql-fill,
+.enhanced-rich-text-editor .ql-toolbar button.ql-active .ql-fill {
+  fill: hsl(var(--primary));
+}
+
+.enhanced-rich-text-editor .ql-tooltip {
+  background: hsl(var(--popover));
+  border: 1px solid hsl(var(--border));
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  color: hsl(var(--popover-foreground));
+}
+
+.enhanced-rich-text-editor .ql-tooltip input {
+  background: hsl(var(--input));
+  border: 1px solid hsl(var(--border));
+  color: hsl(var(--foreground));
+  border-radius: 0.25rem;
+  padding: 0.25rem 0.5rem;
+}
+
+/* Legacy Rich Text Editor Styles */
+.ql-toolbar {
+  border-top: 1px solid hsl(var(--border)) !important;
+  border-left: 1px solid hsl(var(--border)) !important;
+  border-right: 1px solid hsl(var(--border)) !important;
+  background-color: hsl(var(--muted)) !important;
+}
+
+.ql-container {
+  border-bottom: 1px solid hsl(var(--border)) !important;
+  border-left: 1px solid hsl(var(--border)) !important;
+  border-right: 1px solid hsl(var(--border)) !important;
+  font-family: inherit !important;
+}
+
+.ql-editor {
+  min-height: 200px !important;
+  font-family: inherit !important;
+  color: hsl(var(--foreground)) !important;
+  background-color: hsl(var(--background)) !important;
+}
+
+.ql-editor.ql-blank::before {
+  color: hsl(var(--muted-foreground)) !important;
+}
+
+.ql-snow .ql-picker-label {
+  color: hsl(var(--foreground)) !important;
+}
+
+.ql-snow .ql-picker-options {
+  background-color: hsl(var(--background)) !important;
+  border: 1px solid hsl(var(--border)) !important;
+}
+
+.ql-snow .ql-picker-item {
+  color: hsl(var(--foreground)) !important;
+}
+
+.ql-snow .ql-picker-item:hover {
+  background-color: hsl(var(--muted)) !important;
+}
+
+.ql-snow .ql-stroke {
+  stroke: hsl(var(--foreground)) !important;
+}
+
+.ql-snow .ql-fill {
+  fill: hsl(var(--foreground)) !important;
+}
+
 @layer base {
   * {
     @apply border-border;
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply text-foreground font-inter antialiased;
+    background: var(--gradient-background);
+    background-attachment: fixed;
+    min-height: 100vh;
+  }
+
+  /* Ensure all containers inherit the background */
+  #root {
+    background: transparent;
+    min-height: 100vh;
+  }
+}
+
+@layer components {
+  /* Button Variants */
+  .btn-hero {
+    @apply bg-gradient-to-r from-primary to-accent text-primary-foreground font-semibold px-8 py-4 rounded-xl shadow-elegant hover:shadow-glow transition-all duration-300 hover:scale-105;
+  }
+  
+  .btn-secondary {
+    @apply bg-gradient-to-r from-secondary to-yellow-400 text-secondary-foreground font-semibold px-6 py-3 rounded-lg shadow-card hover:shadow-elegant transition-all duration-300 hover:scale-105;
+  }
+
+  .btn-outline {
+    @apply border-2 border-primary text-primary bg-transparent font-semibold px-6 py-3 rounded-lg hover:bg-primary hover:text-primary-foreground transition-all duration-300;
+  }
+
+  /* Card Variants */
+  .card-elevated {
+    @apply bg-card border border-border rounded-xl shadow-card hover:shadow-elegant transition-all duration-300 hover:-translate-y-2;
+  }
+
+  .card-gradient {
+    @apply bg-gradient-to-br from-card to-muted border border-border rounded-xl shadow-card hover:shadow-elegant transition-all duration-300;
+  }
+
+  /* Navigation */
+  .nav-blur {
+    @apply bg-background/80 backdrop-blur-lg border-b border-border/50;
+  }
+
+  /* Text Gradients */
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent;
+  }
+
+  .text-hero {
+    @apply bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent;
+  }
+
+  /* Image Animation Classes */
+  .image-hover {
+    @apply transition-all duration-500 ease-out hover:scale-105 hover:shadow-glow rounded-lg overflow-hidden;
+  }
+
+  .image-hero {
+    @apply transition-all duration-700 ease-out hover:scale-110 hover:shadow-elegant hover:brightness-110 rounded-xl overflow-hidden;
+  }
+
+  .image-card {
+    @apply transition-all duration-300 ease-out hover:scale-105 hover:shadow-card hover:brightness-105 rounded-md overflow-hidden;
+  }
+
+  .image-zoom {
+    @apply transition-all duration-600 ease-out hover:scale-125 hover:shadow-glow cursor-pointer rounded-lg overflow-hidden;
+  }
+
+  .image-float {
+    @apply transition-all duration-500 ease-out hover:-translate-y-2 hover:shadow-elegant hover:scale-105 rounded-lg overflow-hidden;
   }
 }
