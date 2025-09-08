@@ -757,23 +757,37 @@ const BlogManager: React.FC<BlogManagerProps> = ({ userRole }) => {
                               )}
                            </div>
                            
-                           <div>
-                             <Label htmlFor="excerpt" className="text-base font-semibold">Excerpt</Label>
-                             <p className="text-sm text-muted-foreground mb-2">A brief summary that appears in blog listings</p>
-                             <Textarea
-                               id="excerpt"
-                               aria-label="Excerpt"
-                               value={formData.excerpt}
-                               onChange={(e) => setFormData({...formData, excerpt: e.target.value})}
-                               rows={3}
-                                placeholder="Write a compelling excerpt to attract readers..."
-                                className="resize-none"
-                                data-testid="blog-excerpt-input"
+                            <div>
+                              <Label htmlFor="excerpt" className="text-base font-semibold">Excerpt</Label>
+                              <p className="text-sm text-muted-foreground mb-2">A brief summary that appears in blog listings</p>
+                              <Textarea
+                                id="excerpt"
+                                aria-label="Excerpt"
+                                value={formData.excerpt}
+                                onChange={(e) => setFormData({...formData, excerpt: e.target.value})}
+                                rows={3}
+                                 placeholder="Write a compelling excerpt to attract readers..."
+                                 className="resize-none"
+                                 data-testid="blog-excerpt-input"
+                               />
+                              <div className="text-xs text-muted-foreground mt-1">
+                                {formData.excerpt.length}/160 characters
+                              </div>
+                            </div>
+
+                            <div>
+                              <Label htmlFor="slug" className="text-base font-semibold">URL Slug</Label>
+                              <Input
+                                id="slug"
+                                value={formData.slug}
+                                onChange={(e) => {
+                                  setFormData({...formData, slug: e.target.value});
+                                  setSlugAuto(false);
+                                }}
+                                placeholder="url-friendly-slug"
+                                data-testid="blog-slug-input"
                               />
-                             <div className="text-xs text-muted-foreground mt-1">
-                               {formData.excerpt.length}/160 characters
-                             </div>
-                           </div>
+                            </div>
 
                             <div className="space-y-4">
                               <div className="flex items-center justify-between border-b pb-2">
@@ -965,28 +979,30 @@ const BlogManager: React.FC<BlogManagerProps> = ({ userRole }) => {
                                </p>
                              </div>
 
-                             <div>
-                               <Label htmlFor="featured_image" className="text-sm font-medium">Featured Image URL</Label>
-                               <Input
-                                 id="featured_image"
-                                 value={formData.featured_image_url}
-                                 onChange={(e) => setFormData({...formData, featured_image_url: e.target.value})}
-                                 placeholder="https://example.com/image.jpg"
-                                 className="mt-1"
-                               />
-                               {formData.featured_image_url && (
-                                 <div className="mt-2">
-                                   <img 
-                                     src={formData.featured_image_url} 
-                                     alt="Featured image preview" 
-                                     className="w-full h-20 object-cover rounded border"
-                                     onError={(e) => {
-                                       e.currentTarget.style.display = 'none';
-                                     }}
-                                   />
-                                 </div>
-                               )}
-                             </div>
+                              <div>
+                                <Label htmlFor="featured_image" className="text-sm font-medium">Featured Image URL</Label>
+                                <Input
+                                  id="featured_image"
+                                  value={formData.featured_image_url}
+                                  onChange={(e) => setFormData({...formData, featured_image_url: e.target.value})}
+                                  placeholder="https://example.com/image.jpg"
+                                  className="mt-1"
+                                  data-testid="featured-image-upload"
+                                />
+                                {formData.featured_image_url && (
+                                  <div className="mt-2">
+                                    <img 
+                                      src={formData.featured_image_url} 
+                                      alt="Featured image preview" 
+                                      className="w-full h-20 object-cover rounded border"
+                                      onError={(e) => {
+                                        e.currentTarget.style.display = 'none';
+                                      }}
+                                      data-testid="featured-image-preview"
+                                    />
+                                  </div>
+                                )}
+                              </div>
                            </div>
                          </Card>
                        </div>

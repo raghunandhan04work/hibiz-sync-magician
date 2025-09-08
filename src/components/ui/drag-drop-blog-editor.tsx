@@ -96,7 +96,8 @@ const DragDropBlogEditor: React.FC<DragDropBlogEditorProps> = ({
       type: 'left-image-right-text' as const,
       name: 'Left Image + Right Text',
       icon: Layout,
-      description: 'Image on left, text on right'
+      description: 'Image on left, text on right',
+      testId: 'image-left-template'
     },
     {
       type: 'right-image-left-text' as const,
