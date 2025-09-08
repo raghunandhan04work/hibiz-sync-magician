@@ -95,10 +95,10 @@ const Admin = () => {
 
         <Tabs defaultValue="blogs" className="space-y-6">
           <TabsList className="grid w-full grid-cols-4">
-            <TabsTrigger value="blogs">Blog Management</TabsTrigger>
-            <TabsTrigger value="content">Content Management</TabsTrigger>
-            <TabsTrigger value="tests">Test Reports</TabsTrigger>
-            <TabsTrigger value="preview">Live Website Editor</TabsTrigger>
+            <TabsTrigger value="blogs" data-testid="blog-manager-tab">Blog Management</TabsTrigger>
+            <TabsTrigger value="content" data-testid="content-manager-tab">Content Management</TabsTrigger>
+            <TabsTrigger value="tests" data-testid="test-manager-tab">Test Reports</TabsTrigger>
+            <TabsTrigger value="preview" data-testid="preview-tab">Live Website Editor</TabsTrigger>
           </TabsList>
 
           <TabsContent value="blogs">

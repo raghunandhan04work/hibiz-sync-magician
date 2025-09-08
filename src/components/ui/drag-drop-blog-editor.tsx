@@ -387,6 +387,7 @@ const DragDropBlogEditor: React.FC<DragDropBlogEditorProps> = ({
                   onUploadComplete={(url) => updateBlock(block.id, { imageUrl: url })}
                   variant="outline"
                   size="sm"
+                  data-testid="block-image-upload"
                 />
               </div>
             </div>
@@ -789,6 +790,7 @@ const DragDropBlogEditor: React.FC<DragDropBlogEditorProps> = ({
             onClick={() => setIsPreviewMode(!isPreviewMode)}
             size="sm"
             aria-label="Toggle preview mode"
+            data-testid="preview-blog-button"
           >
             {isPreviewMode ? <EyeOff className="w-4 h-4 mr-2" /> : <Eye className="w-4 h-4 mr-2" />}
             <span className="sr-only">Toggle preview mode</span>
@@ -809,13 +811,20 @@ const DragDropBlogEditor: React.FC<DragDropBlogEditorProps> = ({
               </DialogHeader>
               <div className="grid grid-cols-2 gap-4">
                 {blockTypes.map((blockType) => (
-                  <Button
-                    key={blockType.type}
-                    variant="outline"
-                    className="h-auto p-4 flex flex-col items-start gap-2"
-                    onClick={() => addBlock(blockType.type)}
-                  >
-                    <div className="flex items-center gap-2">
+                   <Button
+                     key={blockType.type}
+                     variant="outline"
+                     className="h-auto p-4 flex flex-col items-start gap-2"
+                     onClick={() => addBlock(blockType.type)}
+                     data-testid={
+                       blockType.type === 'full-width-text' ? 'text-block-template' :
+                       blockType.type === 'left-image-right-text' ? 'image-left-template' :
+                       blockType.type === 'right-image-left-text' ? 'image-right-template' :
+                       blockType.type === 'image-caption' ? 'image-text-block-template' :
+                       `${blockType.type}-template`
+                     }
+                    >
+                     <div className="flex items-center gap-2">
                       <blockType.icon className="w-5 h-5" />
                       <span className="font-medium">{blockType.name}</span>
                     </div>
@@ -837,7 +846,7 @@ const DragDropBlogEditor: React.FC<DragDropBlogEditorProps> = ({
         <DragDropContext onDragEnd={handleDragEnd}>
           <Droppable droppableId="blocks">
             {(provided) => (
-              <div {...provided.droppableProps} ref={provided.innerRef}>
+              <div {...provided.droppableProps} ref={provided.innerRef} data-testid="editor-canvas">
                 {value.blocks.map((block, index) => (
                   <Draggable key={block.id} draggableId={block.id} index={index}>
                     {(provided, snapshot) => (

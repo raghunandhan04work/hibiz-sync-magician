@@ -303,7 +303,7 @@ const BlogManager: React.FC<BlogManagerProps> = ({ userRole }) => {
 
       toast({ 
         title: "Success", 
-        description: editingBlog ? "Blog updated successfully!" : "Blog created successfully!" 
+        description: editingBlog ? "Blog updated successfully!" : "Blog created successfully!"
       });
 
       setEditingBlog(null);
@@ -1163,9 +1163,9 @@ const BlogManager: React.FC<BlogManagerProps> = ({ userRole }) => {
             </div>
           </Card>
         ) : (
-          <div className="grid gap-4">
+          <div className="grid gap-4" data-testid="blog-list">
             {filteredBlogs.map((blog) => (
-              <Card key={blog.id} className="hover:shadow-lg transition-all duration-200 border-l-4 border-l-primary/20 hover:border-l-primary">
+              <Card key={blog.id} className="hover:shadow-lg transition-all duration-200 border-l-4 border-l-primary/20 hover:border-l-primary" data-testid="blog-item">
                 <CardHeader className="pb-3">
                   <div className="flex justify-between items-start gap-4">
                     <div className="flex-1 min-w-0">
@@ -1175,13 +1175,14 @@ const BlogManager: React.FC<BlogManagerProps> = ({ userRole }) => {
                           <Star className="w-4 h-4 text-yellow-500 fill-current" />
                         )}
                       </div>
-                      <div className="flex flex-wrap items-center gap-3 text-sm text-muted-foreground">
-                        <Badge 
-                          variant={blog.status === 'published' ? 'default' : blog.status === 'draft' ? 'secondary' : 'outline'}
-                          className="capitalize"
-                        >
-                          {blog.status}
-                        </Badge>
+                       <div className="flex flex-wrap items-center gap-3 text-sm text-muted-foreground">
+                         <Badge 
+                           variant={blog.status === 'published' ? 'default' : blog.status === 'draft' ? 'secondary' : 'outline'}
+                           className="capitalize"
+                           data-testid={blog.status === 'draft' ? 'draft-badge' : undefined}
+                         >
+                           {blog.status}
+                         </Badge>
                         <span className="flex items-center gap-1">
                           <Calendar className="w-3 h-3" />
                           {new Date(blog.created_at).toLocaleDateString()}
@@ -1246,6 +1247,18 @@ const BlogManager: React.FC<BlogManagerProps> = ({ userRole }) => {
           </div>
         )}
       </div>
+      
+      {/* Confirm Delete Dialog */}
+      <ConfirmDialog
+        open={deleteDialog.open}
+        onOpenChange={(open) => setDeleteDialog({ open, blogId: null })}
+        onConfirm={confirmDelete}
+        title="Delete Blog Post"
+        description="Are you sure you want to delete this blog post? This action cannot be undone."
+        confirmText="Delete"
+        cancelText="Cancel"
+        data-testid="confirm-delete"
+      />
     </div>
   );
 };
